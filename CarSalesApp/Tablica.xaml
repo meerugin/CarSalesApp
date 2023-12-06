@@ -1,0 +1,37 @@
+﻿<Window x:Class="CarSalesApp.Tablica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarSalesApp"
+        mc:Ignorable="d"
+        Title="Tablica" Height="500" Width="850">
+    <Grid Background="Red">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView Name="SoldCarsListView" Grid.Row="0" Background="Red" Foreground="Black" FontSize="20" FontWeight="Bold">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Дата продажи" Width="220" DisplayMemberBinding="{Binding SellDate}"/>
+                    <GridViewColumn Header="Номер автомобиля" Width="200" DisplayMemberBinding="{Binding licensePlate}"/>
+                    <GridViewColumn Header="Имя клиента" Width="150" DisplayMemberBinding="{Binding CustName}"/>
+                    <GridViewColumn Header="Имя продавца" Width="150" DisplayMemberBinding="{Binding SellerName}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView Name="FreeCarsListView" Grid.Row="1" Background="Red" Foreground="Black" FontSize="20" FontWeight="Bold">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Бренд" Width="120" DisplayMemberBinding="{Binding brand}"/>
+                    <GridViewColumn Header="Модель" Width="120" DisplayMemberBinding="{Binding model}"/>
+                    <GridViewColumn Header="Номер автомобиля" Width="120" DisplayMemberBinding="{Binding licensePlate}"/>
+                    <GridViewColumn Header="Цена" Width="120" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Статус" Width="120" DisplayMemberBinding="{Binding available}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

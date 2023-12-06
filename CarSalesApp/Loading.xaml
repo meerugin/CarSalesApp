@@ -1,0 +1,35 @@
+﻿<Window x:Class="CarSalesApp.Loading"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarSalesApp"
+        mc:Ignorable="d"
+        Title="Loading" Height="500" Width="850">
+    <Grid Background="Red" Margin="0,0,0,-3" Loaded="Grid_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="GrandAvto" Foreground="White" FontWeight="Bold" FontSize="60" Margin="238,10,238,338">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="7" Color="Black" BlurRadius="1" Opacity="0.5"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Image Margin="110,42,131,20" Source="/pngwing.com.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <ProgressBar x:Name="Myprogress" HorizontalAlignment="Center" Height="18" Margin="0,394,0,0" VerticalAlignment="Top" Width="442" Background="Black" Foreground="Orange"/>
+        <Label x:Name="Percentage" Content="" HorizontalAlignment="Center" Margin="0,417,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+    </Grid>
+</Window>
